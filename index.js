@@ -20,7 +20,7 @@ function logTokenUsage(tokens) {
   fs.appendFileSync(LOG_FILE, `${now} - Tokens used: ${tokens}\n`);
 }
 
-app.post("/api/chat", async (req, res) => {
+app.post("/chat", async (req, res) => {
   const message = req.body.message;
 
   try {
