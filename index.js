@@ -20,6 +20,10 @@ function logTokenUsage(tokens) {
   fs.appendFileSync(LOG_FILE, `${now} - Tokens used: ${tokens}\n`);
 }
 
+app.get("/", (req, res) => {
+  res.send("Selamat datang di API Chatbot!");
+});
+
 app.post("/chat", async (req, res) => {
   const message = req.body.message;
 
