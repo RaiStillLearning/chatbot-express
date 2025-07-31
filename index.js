@@ -24,6 +24,12 @@ app.get("/", (req, res) => {
   res.send("Selamat datang di API Chatbot!");
 });
 
+app.get("/chat", (req, res) => {
+  res.send(
+    "Silakan kirim pesan ke endpoint POST /chat untuk berinteraksi dengan chatbot."
+  );
+});
+
 app.post("/chat", async (req, res) => {
   const message = req.body.message;
 
