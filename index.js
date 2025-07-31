@@ -6,7 +6,11 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors(
+    { origin: "http://localhost:5173", credentials: true } // Adjust the origin as needed
+  )
+);
 app.use(express.json());
 
 const LOG_FILE = path.join(__dirname, "token_usage.log");
